@@ -6,7 +6,7 @@ var hosts_to_scan = ["yahoo.com:443", "google.com:443", "inexistent-host"];
 //Iterate through hosts
 for (var i = 0; i < hosts_to_scan.length; i++) {
     var s = new WebSocket("wss://" + hosts_to_scan[i], null, 7000, 1);
-	$("#status").append("Scanning"+hosts_to_scan[i]+"<br>");
+    $("#status").append("Scanning "+ hosts_to_scan[i] + " now.<br>");
     //Capture start time for benchmark later
     s.start = performance.now();
     s.host = hosts_to_scan[i];
